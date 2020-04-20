@@ -8,11 +8,13 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "generate": "nuxt-ts generate",
+    "deploy": "nuxt-ts generate && firebase deploy --only hosting --project=ykoba-dev",
     "start": "nuxt-ts start",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
     "test": "jest"
   },
   "dependencies": {
+    "aframe": "^1.0.4",
     "nuxt": "^2.0.0",
     "three": "^0.115.0",
     "vue-property-decorator": "^8.4.1",

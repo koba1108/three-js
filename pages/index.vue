@@ -1,5 +1,5 @@
 <template>
-  <div class="hw100">
+  <div id="container">
     <canvas id="canvas" ref="canvas"/>
   </div>
 </template>
@@ -32,6 +32,7 @@
   const boxTick = () => {
     box.rotation.y += 0.01
     renderer.render(scene, camera) // レンダリング
+    renderer.xr.enabled = true
     requestAnimationFrame(boxTick)
   }
 
@@ -77,7 +78,7 @@
       const width = window.innerWidth
       this.canvas.height = height
       this.canvas.width = width
-      setRenderer(height, width)
+      setRenderer(width, height)
       if (!window.onresize) {
         window.onresize = this.setWindowResize
       }
@@ -95,14 +96,3 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .hw100 {
-    height: 100vh;
-    width: 100vw;
-
-    canvas {
-      height: 100%;
-      width: 100%;
-    }
-  }
-</style>
