@@ -16,7 +16,7 @@
   "dependencies": {
     "aframe": "^1.0.4",
     "nuxt": "^2.0.0",
-    "three": "^0.115.0",
+    "three": "^0.125.0",
     "vue-property-decorator": "^8.4.1",
     "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxtjs/axios": "^5.3.6",
